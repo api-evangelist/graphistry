@@ -1,0 +1,26 @@
+generated: '2026-07-19'
+method: searched
+source: https://hub.graphistry.com/docs/api/1/rest/auth/
+docs: https://hub.graphistry.com/docs/api/1/rest/auth/
+summary:
+  types: [http]
+  http_schemes: [bearer]
+  bearer_format: JWT
+  api_key_in: []
+  oauth2_flows: []
+  notes: Graphistry Hub REST API uses short-lived JWT bearer tokens (api=3). Legacy
+    api=1/2 authentication paths were removed in PyGraphistry 0.56.0.
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  bearer_format: JWT
+  description: JWT obtained by POSTing username/password to api-token-auth/, then sent
+    as an Authorization bearer token on subsequent REST calls.
+  token_endpoints:
+    obtain: POST /api-token-auth/   {"username":"...","password":"..."}
+    refresh: POST /api-token-refresh/   {"token":"..."}
+    verify: POST /api-token-verify/   {"token":"..."}
+  token_lifetime: ~1 hour; refreshable within 24 hours, then full re-authentication
+    required
+  sources: [docs]
