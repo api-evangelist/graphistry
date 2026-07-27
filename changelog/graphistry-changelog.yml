@@ -1,0 +1,24 @@
+generated: '2026-07-19'
+method: searched
+source: https://raw.githubusercontent.com/graphistry/pygraphistry/master/CHANGELOG.md
+scheme: semver
+format: keepachangelog
+subject: PyGraphistry client library
+current_version: 0.57.0
+docs: https://github.com/graphistry/pygraphistry/blob/master/CHANGELOG.md
+entries:
+- version: 0.57.0
+  date: '2026-06-28'
+  breaking: false
+  highlights: Structured whole-entity returns now emit flattened columns instead of
+    Cypher display strings for improved performance and usability.
+- version: 0.56.1
+  date: '2026-05-27'
+  breaking: false
+  highlights: Added experimental GraphSchema snapshot updates, a NetworkX compute API,
+    and Arrow-based schema import/export.
+- version: 0.56.0
+  date: '2026-05-23'
+  breaking: true
+  highlights: Removed legacy api=1/2 authentication paths; api=3 is now the sole supported
+    authentication method with structured validation.

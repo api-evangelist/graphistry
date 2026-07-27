@@ -1,0 +1,51 @@
+generated: '2026-07-19'
+method: searched
+status: published
+official: false
+source: https://github.com/graphistry/graphistry-mcp
+server:
+  name: graphistry-mcp
+  maintainer: community (silkspace)
+  official: false
+  transport: [stdio, http]
+  install:
+  - npx -y @silkspace/graphistry-mcp
+  - python run_graphistry_mcp.py
+  - ./start-graphistry-mcp.sh --http 8080
+  requires: A free Graphistry Hub account; credentials supplied via environment variables
+    or a .env file.
+  description: GPU-accelerated graph visualization and analytics for LLMs using Graphistry
+    and MCP. Community-maintained (not a first-party Graphistry product).
+tools:
+- name: visualize_graph
+  description: Render a graph or hypergraph in Graphistry.
+- name: get_graph_ids
+  description: List stored graph IDs.
+- name: get_graph_info
+  description: Retrieve graph metadata.
+- name: apply_layout
+  description: Apply a layout algorithm to a graph.
+- name: detect_patterns
+  description: Run network/pattern analysis.
+- name: encode_point_color
+  description: Encode point color.
+- name: encode_point_size
+  description: Encode point size.
+- name: encode_point_icon
+  description: Encode point icon.
+- name: encode_point_badge
+  description: Encode point badge.
+- name: apply_ring_categorical_layout
+  description: Apply a categorical ring layout.
+- name: apply_group_in_a_box_layout
+  description: Apply a group-in-a-box layout.
+- name: apply_modularity_weighted_layout
+  description: Apply a modularity-weighted layout.
+- name: apply_ring_continuous_layout
+  description: Apply a continuous ring layout.
+- name: apply_time_ring_layout
+  description: Apply a time-ring layout.
+- name: apply_tree_layout
+  description: Apply a tree layout.
+- name: set_graph_settings
+  description: Configure visualization parameters.

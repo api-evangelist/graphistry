@@ -1,7 +1,28 @@
 aid: graphistry
 name: Graphistry
-description: Graphistry is a company surfaced as a portfolio company of bloomberg-beta and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Graphistry is a GPU-accelerated visual graph analytics platform for exploring,
+  analyzing, and sharing very large graphs and networks directly in the browser.
+  Its open-source PyGraphistry Python client loads, shapes, embeds, and visualizes
+  big graphs from Pandas, Spark, and RAPIDS with end-to-end GPU acceleration, and
+  includes GFQL, a vectorized graph query language. Graphistry Hub is the hosted
+  service exposing a JWT-authenticated REST API for uploading datasets and rendering
+  interactive visualizations, complemented by JavaScript embedding libraries, a CLI
+  for self-hosting, and integrations with Neo4j, Databricks, and RAPIDS. Added to
+  the API Evangelist network from the Bloomberg Beta portfolio.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://github.com/graphistry.png
 url: https://raw.githubusercontent.com/api-evangelist/graphistry/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,10 +32,33 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- Graph Analytics
+- Graph Visualization
+- GPU
+- Network Analysis
+- Data Visualization
+- Graph Query
+- Machine Learning
+- Cybersecurity
+apis:
+- name: Graphistry Hub REST API
+  description: >-
+    JWT-authenticated REST API on Graphistry Hub for authentication (token
+    obtain/refresh/verify), dataset and file upload, and visualization datasets,
+    powering GPU-accelerated graph rendering and sharing.
+  humanURL: https://hub.graphistry.com/docs/api/1/rest/auth/
+  baseURL: https://hub.graphistry.com
+  tags:
+  - Graph Visualization
+  - Graph Analytics
+  properties:
+  - type: Authentication
+    url: authentication/graphistry-authentication.yml
+  - type: Documentation
+    url: https://hub.graphistry.com/docs/api/1/rest/auth/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +67,40 @@ maintainers:
 common:
 - type: Website
   url: https://www.graphistry.com/
+- type: DeveloperPortal
+  url: https://hub.graphistry.com/
+- type: Documentation
+  url: https://pygraphistry.readthedocs.io/en/latest/
+- type: APIReference
+  url: https://pygraphistry.readthedocs.io/en/latest/api/index.html
+- type: GettingStarted
+  url: https://pygraphistry.readthedocs.io/en/latest/10min.html
+- type: SignUp
+  url: https://www.graphistry.com/get-started
+- type: GitHubOrganization
+  url: https://github.com/graphistry
+- type: Packages
+  url: packages/graphistry-packages.yml
+- type: SDKs
+  url: packages/graphistry-packages.yml
+- type: CLI
+  url: https://github.com/graphistry/graphistry-cli
+- type: Authentication
+  url: authentication/graphistry-authentication.yml
+- type: Lifecycle
+  url: lifecycle/graphistry-lifecycle.yml
+- type: ChangeLog
+  url: changelog/graphistry-changelog.yml
+- type: Conventions
+  url: conventions/graphistry-conventions.yml
+- type: MCPServer
+  url: mcp/graphistry-mcp.yml
+- type: LLMsTxt
+  url: llms/graphistry-llms.txt
+- type: DomainSecurity
+  url: security/graphistry-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

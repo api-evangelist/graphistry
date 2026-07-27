@@ -1,0 +1,34 @@
+generated: '2026-07-19'
+method: searched
+source: https://pypi.org/project/graphistry/ ; https://github.com/graphistry
+packages:
+- language: python
+  registry: pypi
+  name: graphistry
+  url: https://pypi.org/project/graphistry/
+  install: pip install graphistry
+  version: 0.57.0
+  official: true
+  repository: https://github.com/graphistry/pygraphistry
+  license: BSD-3-Clause
+  description: PyGraphistry - GPU-accelerated visual graph analytics library to load,
+    shape, embed, and explore big graphs from Pandas/Spark/RAPIDS; includes GFQL.
+- language: javascript
+  registry: npm
+  name: "@graphistry/client-api"
+  url: https://github.com/graphistry/graphistry-js
+  install: npm install @graphistry/client-api
+  official: true
+  repository: https://github.com/graphistry/graphistry-js
+  license: BSD-3-Clause
+  description: graphistry-js - JavaScript API for controlling and responding to embedded
+    Graphistry visualizations (client-api and client-api-react packages).
+- language: python
+  registry: github
+  name: graphistry-cli
+  url: https://github.com/graphistry/graphistry-cli
+  install: pip install graphistry-cli
+  official: true
+  repository: https://github.com/graphistry/graphistry-cli
+  description: Administrative CLI for launching, configuring, and debugging self-hosted
+    Graphistry deployments.

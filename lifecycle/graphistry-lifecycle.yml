@@ -1,0 +1,23 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/graphistry/pygraphistry/blob/master/CHANGELOG.md ; https://hub.graphistry.com/docs/api/1/rest/auth/
+versioning:
+  scheme: api-flag
+  current: api=3
+  notes: REST authentication is versioned via the api flag. api=3 is the sole supported
+    authentication method as of PyGraphistry 0.56.0; legacy api=1 and api=2 paths were
+    removed.
+  docs: https://hub.graphistry.com/docs/api/1/rest/auth/
+client_versioning:
+  scheme: semver
+  current: 0.57.0
+  policy: Keep a Changelog + Semantic Versioning for the PyGraphistry client.
+  docs: https://github.com/graphistry/pygraphistry/blob/master/CHANGELOG.md
+deprecation:
+  policy_url: https://github.com/graphistry/pygraphistry/blob/master/CHANGELOG.md
+  sunset_header: false
+  notes: Deprecations are announced in the client CHANGELOG (e.g. removal of api=1/2
+    auth in 0.56.0). No RFC 8594 Sunset/Deprecation HTTP headers documented.
+sla: null
+status_page: null
+deprecated_operations: []

@@ -1,0 +1,33 @@
+generated: '2026-07-19'
+method: searched
+source: https://hub.graphistry.com/docs/api/1/rest/auth/ ; https://pygraphistry.readthedocs.io/en/latest/
+authentication:
+  style: jwt-bearer
+  detail: Short-lived JWT bearer token obtained from api-token-auth/ and refreshed
+    via api-token-refresh/. See authentication/graphistry-authentication.yml.
+idempotency:
+  supported: false
+  notes: No idempotency-key header/contract is documented for the Graphistry Hub REST
+    API.
+pagination:
+  style: unknown
+  notes: Not documented in the public REST auth reference.
+versioning:
+  style: api-flag
+  detail: api=3 flag selects the authentication/upload contract; see lifecycle/graphistry-lifecycle.yml.
+content_types:
+  request: application/json
+  response: application/json
+error_envelope:
+  style: unknown
+  notes: No public RFC 9457 / structured error envelope documented for the REST API.
+rate_limiting:
+  signaled: false
+  notes: No published rate-limit headers or policy for Graphistry Hub.
+data_formats:
+  upload: Arrow / CSV / Pandas DataFrame ingestion via PyGraphistry; Arrow-based
+    schema import/export added in 0.56.1.
+cross_links:
+  authentication: authentication/graphistry-authentication.yml
+  lifecycle: lifecycle/graphistry-lifecycle.yml
+  changelog: changelog/graphistry-changelog.yml
