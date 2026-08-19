@@ -7,15 +7,16 @@ server:
   name: graphistry-mcp
   maintainer: community (silkspace)
   official: false
-  transport: [stdio, http]
+  transport:
+  - stdio
+  - http
   install:
   - npx -y @silkspace/graphistry-mcp
   - python run_graphistry_mcp.py
   - ./start-graphistry-mcp.sh --http 8080
-  requires: A free Graphistry Hub account; credentials supplied via environment variables
-    or a .env file.
-  description: GPU-accelerated graph visualization and analytics for LLMs using Graphistry
-    and MCP. Community-maintained (not a first-party Graphistry product).
+  requires: A free Graphistry Hub account; credentials supplied via environment variables or a .env file.
+  description: GPU-accelerated graph visualization and analytics for LLMs using Graphistry and MCP. Community-maintained
+    (not a first-party Graphistry product).
 tools:
 - name: visualize_graph
   description: Render a graph or hypergraph in Graphistry.
@@ -49,3 +50,9 @@ tools:
   description: Apply a tree layout.
 - name: set_graph_settings
   description: Configure visualization parameters.
+deployment:
+  mode: local-stdio
+  verified: searched
+  tools: 16
+  checked: '2026-08-12'
+  source: catalog MCP census
