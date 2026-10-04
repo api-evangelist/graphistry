@@ -53,7 +53,7 @@ tags:
 - Network Analysis
 - Data Visualization
 - Graph Query
-- Machine-Learning
+- Machine Learning
 - Cybersecurity
 tags_raw:
 - Company
@@ -65,6 +65,7 @@ tags_raw:
 - Graph Query
 - Machine Learning
 - Cybersecurity
+- Machine-Learning
 apis:
 - name: Graphistry Hub REST API
   description: >-
